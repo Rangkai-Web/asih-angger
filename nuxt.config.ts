@@ -1,0 +1,101 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineNuxtConfig({
+  compatibilityDate: '2025-07-15',
+  devtools: { enabled: process.env.NODE_ENV === 'development' },
+  modules: [
+    '@nuxt/image',
+    '@nuxt/devtools',
+    '@nuxt/icon',
+    '@nuxt/fonts',
+    '@nuxt/hints',
+    '@nuxt/ui',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/seo',
+    'vue3-carousel-nuxt'
+  ],
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+    build: {
+      cssCodeSplit: true,
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+        },
+      },
+    },
+  },
+  css: ['~/assets/css/main.css'],
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+    },
+  },
+  site: {
+    url: 'https://asihangger.com',
+    name: 'Asih Angger',
+    description: 'Asih Angger is a photographer and retoucher who specializes in product photography, portrait photography, beauty photography, baby photography, event photography, and commercial photography.',
+    defaultLocale: 'en',
+    indexable: true,
+  },
+  fonts: {
+    families: [
+      { name: 'Poppins', provider: 'google', weights: ['400', '600', '700'] },
+      { name: 'Inter', provider: 'google', weights: ['300', '400', '500'] },
+    ],
+  },
+  image: {
+    quality: 80,
+    format: ['webp', 'avif'],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
+  },
+  routeRules: {
+    '/': {
+      headers: {
+        'Cache-Control': 'public, max-age=3600, must-revalidate',
+      },
+    },
+    '/**': {
+      headers: {
+        'Cache-Control': 'public, max-age=31536000, immutable',
+      },
+    },
+  },
+  nitro: {
+    compressPublicAssets: true,
+    routeRules: {
+      '/**': {
+        headers: {
+          'X-Content-Type-Options': 'nosniff',
+          'X-Frame-Options': 'DENY',
+          'X-XSS-Protection': '1; mode=block',
+          'Referrer-Policy': 'strict-origin-when-cross-origin',
+          'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+          'Cross-Origin-Opener-Policy': 'same-origin',
+          'Cross-Origin-Resource-Policy': 'cross-origin',
+          'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+          'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://wa.me https://images.unsplash.com; frame-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;",
+          'X-DNS-Prefetch-Control': 'on',
+          'X-Permitted-Cross-Domain-Policies': 'none',
+        },
+      },
+    },
+  },
+  experimental: {
+    payloadExtraction: false,
+  },
+})
