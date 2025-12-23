@@ -39,7 +39,9 @@
         </div>
       </div>
     </div>
+  </section>
 
+  <Teleport to="body">
     <Transition name="lightbox">
       <div
         v-if="selectedImage"
@@ -65,7 +67,7 @@
         </div>
       </div>
     </Transition>
-  </section>
+  </Teleport>
 </template>
 
 <script setup lang="ts">
@@ -192,13 +194,16 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.85);
-  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 99999;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
   cursor: pointer;
+  overflow: auto;
 }
 
 .lightbox-content {
@@ -219,21 +224,22 @@ onUnmounted(() => {
 }
 
 .lightbox-close {
-  position: absolute;
-  top: -50px;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
   color: white;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s;
-  z-index: 10000;
+  z-index: 100000;
+  backdrop-filter: blur(10px);
 }
 
 .lightbox-close:hover {
@@ -268,9 +274,10 @@ onUnmounted(() => {
   }
 
   .lightbox-close {
-    top: -40px;
-    width: 36px;
-    height: 36px;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
   }
 }
 

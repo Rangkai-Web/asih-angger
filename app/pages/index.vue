@@ -22,14 +22,14 @@ useSeoMeta({
   description: 'High-end photography services for products, portraits, and life\'s milestones. Professional retouching and commercial photography.',
   ogTitle: 'Asih Angger - Professional Photography & Retouching',
   ogDescription: 'High-end photography services for products, portraits, and life\'s milestones.',
-  ogImage: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=1200',
+  ogImage: 'https://asihangger.com/icon.png',
   ogUrl: 'https://asihangger.com',
   ogType: 'website',
   ogSiteName: 'Asih Angger',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Asih Angger - Professional Photography & Retouching',
   twitterDescription: 'High-end photography services for products, portraits, and life\'s milestones.',
-  twitterImage: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=1200',
+  twitterImage: 'https://asihangger.com/icon.png',
   keywords: 'photography, retouching, product photography, portrait photography, beauty photography, baby photography, event photography, commercial photography, Jakarta',
   author: 'Asih Angger',
   robots: {
@@ -71,7 +71,7 @@ useHead({
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=1200',
+          url: 'https://asihangger.com/icon.png',
         },
         address: {
           '@type': 'PostalAddress',
