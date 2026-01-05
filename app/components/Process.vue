@@ -2,8 +2,8 @@
   <section id="process" ref="sectionRef" class="py-24 bg-white fade-in-section" :class="{ 'is-visible': isVisible }">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold mb-4 uppercase tracking-tighter">How We Work</h2>
-        <p class="text-gray-500">A streamlined journey from initial idea to final delivery.</p>
+        <h2 class="text-4xl font-bold mb-4 uppercase tracking-tighter">Bagaimana Kami Bekerja</h2>
+        <p class="text-gray-500">Proses kerja terstruktur untuk menghasilkan visual terbaik bagi brand Anda.</p>
       </div>
 
       <div class="relative">
@@ -16,12 +16,12 @@
             class="process-step group relative"
             :style="{ '--delay': index * 0.1 + 's' }"
           >
-            <div class="bg-white p-8 rounded-lg border-2 border-primary hover:border-primary hover:shadow-lg transition-all duration-300 h-full flex flex-col items-center text-center">
+            <div class="bg-white px-4 py-8 rounded-lg border-2 border-primary hover:border-primary hover:shadow-lg transition-all duration-300 h-full flex flex-col items-center text-center">
               <div class="relative flex items-center justify-center mb-6">
                 <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                   <Icon :name="step.icon" class="w-8! h-8! text-white group-hover:text-white transition-colors duration-300" />
                 </div>
-                <span class="absolute -top-4 w-8 h-8 rounded-full bg-dark text-white flex items-center justify-center text-xs font-bold">
+                <span class="absolute -top-3 w-8 h-8 rounded-full bg-dark text-white flex items-center justify-center text-xs font-bold">
                   {{ String(index + 1).padStart(2, '0') }}
                 </span>
               </div>
@@ -46,28 +46,28 @@ const { elementRef: sectionRef, isVisible } = useFadeIn()
 const steps = [
   {
     icon: 'lucide:message-circle',
-    title: 'Consultation',
-    description: 'Discussing your vision, goals, and style preferences over coffee or call.',
+    title: 'Konsultasi',
+    description: 'Kami memulai dengan diskusi mendalam untuk memahami visi, tujuan, konsep, dan preferensi gaya visual Anda. Setiap detail dibahas agar hasil akhir sesuai ekspektasi brand.',
   },
   {
     icon: 'lucide:calendar-check',
-    title: 'Booking',
-    description: 'Securing your date and refining the creative brief for the session.',
+    title: 'Pemesanan',
+    description: 'Setelah konsep disepakati, kami menyusun jadwal pemotretan serta proposal kreatif yang matang, mencakup konsep visual, mood, dan kebutuhan teknis sesi foto.',
   },
   {
     icon: 'lucide:camera',
     title: 'Shooting',
-    description: 'The creative execution using professional lighting and high-end gear.',
+    description: 'Proses eksekusi kreatif dilakukan menggunakan pencahayaan profesional dan peralatan berkualitas tinggi untuk menghasilkan foto yang estetik, tajam, dan berkarakter.',
   },
   {
     icon: 'lucide:package',
-    title: 'Delivery',
-    description: 'Culling, professional retouching, and delivery of high-res digital files.',
+    title: 'Pengiriman',
+    description: 'Foto terbaik dipilih, diproses dengan retouching profesional, lalu dikirim dalam format digital berkualitas tinggi siap digunakan untuk kebutuhan promosi.',
   },
   {
     icon: 'lucide:check-circle',
-    title: 'Revision',
-    description: 'Ensuring every detail is perfect with a final round of subtle adjustments.',
+    title: 'Revisi',
+    description: 'Kami memastikan setiap detail sempurna melalui tahap revisi halus, sehingga hasil akhir benar-benar merepresentasikan karakter dan nilai brand Anda.',
   },
 ]
 </script>

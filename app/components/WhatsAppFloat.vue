@@ -6,7 +6,7 @@
     target="_blank"
     rel="noopener noreferrer"
   >
-    <Icon name="lucide:phone" class="w-6 h-6" />
+    <Icon name="ic:baseline-whatsapp" class="w-7! h-7!" />
   </a>
 </template>
 
@@ -16,11 +16,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 20px;
-  right: 20px;
+  bottom: 15px;
+  right: 15px;
   background: #25D366;
   color: white;
-  padding: 20px;
+  padding: 14px;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   z-index: 100;
@@ -29,8 +29,8 @@
 
 @media (min-width: 640px) {
   .whatsapp-float {
-    bottom: 30px;
-    right: 30px;
+    bottom: 25px;
+    right: 25px;
   }
 }
 

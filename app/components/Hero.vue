@@ -4,9 +4,9 @@
       <div class="grid grid-cols-2 h-full">
         <div class="bg-gray-200">
           <NuxtImg
-            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=1000"
+            src="/img/hero/hero1.webp"
             class="w-full h-full object-cover"
-            alt="Professional product photography showcasing luxury watch with elegant lighting and composition"
+            alt="Fotografi profesional untuk produk, event, dan momen berharga Anda"
             width="1000"
             height="1000"
             loading="eager"
@@ -16,9 +16,9 @@
         </div>
         <div class="bg-gray-300">
           <NuxtImg
-            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1000"
+            src="/img/hero/hero2.webp"
             class="w-full h-full object-cover"
-            alt="Professional portrait photography with studio lighting capturing natural beauty and elegance"
+            alt="Fotografi profesional untuk produk, event, dan momen berharga Anda"
             width="1000"
             height="1000"
             loading="eager"
@@ -31,15 +31,15 @@
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 text-white text-center">
-      <h1 class="text-5xl md:text-7xl font-bold mb-6 max-w-4xl mx-auto leading-tight">
-        Capturing the Essence of <span class="text-primary">Every Moment.</span>
+      <h1 class="text-4xl md:text-7xl font-bold mb-6 max-w-4xl mx-auto leading-tight">
+        Mengambil <span class="text-primary">Momen Berharga.</span>
       </h1>
-      <p class="text-xl md:text-2xl font-light mb-10 max-w-2xl mx-auto">
-        High-end photography services for products, portraits, and life's milestones.
+      <p class="text-md md:text-2xl font-light mb-10 max-w-2xl mx-auto">
+        Fotografi profesional untuk produk, event, dan momen berharga Anda.
       </p>
       <div class="flex flex-col md:flex-row justify-center gap-4">
-        <a href="#portfolio" class="px-10 py-4 border-2 border-white font-bold uppercase tracking-widest hover:bg-white hover:text-black transition" aria-label="View photography portfolio">View Portfolio</a>
-        <a href="#contact" class="px-10 py-4 bg-primary text-black font-bold uppercase tracking-widest hover:brightness-105 transition" aria-label="Book a photography session">Book a Session</a>
+        <a href="#portfolio" class="px-10 py-4 border-2 border-white font-bold uppercase tracking-widest hover:bg-white hover:text-black transition" aria-label="View photography portfolio">Portofolio</a>
+        <a href="#contact" class="px-10 py-4 bg-primary text-black font-bold uppercase tracking-widest hover:brightness-105 transition" aria-label="Book a photography session">Hubungi Kami</a>
       </div>
     </div>
   </section>

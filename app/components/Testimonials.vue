@@ -2,7 +2,7 @@
   <section id="testimonials" ref="sectionRef" class="py-24 bg-white overflow-hidden fade-in-section" :class="{ 'is-visible': isVisible }">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold mb-4 uppercase tracking-tighter">Client Experiences</h2>
+        <h2 class="text-4xl font-bold mb-4 uppercase tracking-tighter">Testimoni Klien</h2>
       </div>
       
       <Carousel
@@ -15,13 +15,19 @@
         class="testimonials-carousel"
       >
         <Slide v-for="(testimonial, index) in testimonials" :key="index">
-          <div class="p-8 border-l-8 border-primary bg-gray-50 italic text-gray-600 relative h-full mx-2">
-            <Icon name="lucide:quote" class="w-12 h-12 absolute -top-6 text-primary opacity-20" />
-            <p class="mb-6 leading-relaxed">"{{ testimonial.quote }}"</p>
+          <div class="flex justify-center items-center p-8 border-t-8 border-b-8 border-primary bg-gray-50 italic text-gray-600 relative h-full mx-2">
+            <!-- <Icon name="lucide:quote" class="w-8! h-8! text-primary absolute -top-6" /> -->
+            <NuxtImg
+              :src="testimonial.img"
+              :alt="testimonial.name"
+              class="w-fit h-fit rounded-md object-cover"
+              draggable="false"
+            />
+            <!-- <p class="mb-6 leading-relaxed">"{{ testimonial.quote }}"</p>
             <div class="mt-6 not-italic">
               <p class="font-bold uppercase text-xs tracking-widest">{{ testimonial.name }}</p>
               <p class="text-[10px] text-gray-400">{{ testimonial.role }}</p>
-            </div>
+            </div> -->
           </div>
         </Slide>
 
@@ -41,29 +47,19 @@ const { elementRef: sectionRef, isVisible } = useFadeIn()
 
 const testimonials = [
   {
-    quote: 'The product shots for our luxury watch brand were beyond expectations. Pure architectural precision.',
-    name: 'Jameson Ford',
-    role: 'CEO, ORO LOGIC',
+    img: '/img/testi/testi1.webp',
+    // quote: 'So far suka sih kak dengan hasilnya, next pasti',
+    name: 'Kak Ketty',
   },
   {
-    quote: 'Capturing my baby\'s first month was a dream. Asih Angger handled the process with such gentleness.',
-    name: 'Elena Rossi',
-    role: 'Private Client',
+    img: '/img/testi/testi2.webp',
+    // quote: 'Sangat baik, kak asih sangat berpengalaman dan memiliki kemampuan yang baik',
+    name: 'Kak Tia',
   },
   {
-    quote: 'Professionalism at its peak. The event coverage was seamless and the delivery was ahead of schedule.',
-    name: 'Sarah K.',
-    role: 'Event Lead, TechGlobal',
-  },
-  {
-    quote: 'The beauty portrait session exceeded all my expectations. Every detail was perfect, from lighting to final retouching.',
-    name: 'Maria Santos',
-    role: 'Fashion Model',
-  },
-  {
-    quote: 'Working with Asih Angger transformed our product catalog. The images elevated our brand perception significantly.',
-    name: 'David Chen',
-    role: 'Marketing Director, Luxe Brands',
+    img: '/img/testi/testi3.webp',
+    // quote: 'Kak asih sangat baik, sangat berpengalaman dan memiliki kemampuan yang baik',
+    name: 'Diah Qudsiyah',
   },
 ]
 

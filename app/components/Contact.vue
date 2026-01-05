@@ -3,13 +3,13 @@
     <div class="max-w-3xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
-        <p class="text-gray-500">Ready to start your next project? Let's talk about it.</p>
+        <p class="text-gray-500">Silakan hubungi kami untuk mendapatkan informasi lebih lanjut.</p>
       </div>
       
       <form @submit.prevent="handleSubmit" class="space-y-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label for="name" class="block text-xs uppercase tracking-widest font-bold mb-2 text-gray-400">Name</label>
+            <label for="name" class="block text-xs uppercase tracking-widest font-bold mb-2 text-gray-400">Nama</label>
             <input
               id="name"
               v-model="form.name"
@@ -20,7 +20,7 @@
             />
           </div>
           <div>
-            <label for="email" class="block text-xs uppercase tracking-widest font-bold mb-2 text-gray-400">Email Address</label>
+            <label for="email" class="block text-xs uppercase tracking-widest font-bold mb-2 text-gray-400">Email</label>
             <input
               id="email"
               v-model="form.email"
@@ -32,7 +32,7 @@
           </div>
         </div>
         <div>
-          <label for="service" class="block text-xs uppercase tracking-widest font-bold mb-2 text-gray-400">Service Type</label>
+          <label for="service" class="block text-xs uppercase tracking-widest font-bold mb-2 text-gray-400">Jenis Layanan</label>
           <select
             id="service"
             v-model="form.service"
@@ -40,17 +40,17 @@
             class="w-full border-b border-gray-300 py-3 focus:outline-none focus:border-primary transition-colors bg-transparent"
             required
           >
-            <option value="">Select a service</option>
-            <option value="Product Photography">Product Photography</option>
+            <option value="">Pilih Layanan</option>
+            <option value="Foto Produk">Foto Produk</option>
             <option value="Beauty Portrait">Beauty Portrait</option>
-            <option value="Baby Documentary">Baby Documentary</option>
-            <option value="Event Coverage">Event Coverage</option>
-            <option value="Photo Retouching">Photo Retouching</option>
-            <option value="Editing & Retouching">Editing & Retouching</option>
+            <option value="Dokumentasi Bayi">Dokumentasi Bayi</option>
+            <option value="Event Photography">Event Photography</option>
+            <option value="Retouch & Editing">Retouch & Editing</option>
+            <option value="Kelas Privat">Kelas Privat</option>
           </select>
         </div>
         <div>
-          <label for="message" class="block text-xs uppercase tracking-widest font-bold mb-2 text-gray-400">Message</label>
+          <label for="message" class="block text-xs uppercase tracking-widest font-bold mb-2 text-gray-400">Pesan</label>
           <textarea
             id="message"
             v-model="form.message"
@@ -63,7 +63,7 @@
           type="submit"
           class="w-full bg-primary py-4 font-bold uppercase tracking-widest hover:brightness-105 transition mt-8 shadow-lg"
         >
-          Send Inquiry
+          Kirim Pesan
         </button>
       </form>
     </div>

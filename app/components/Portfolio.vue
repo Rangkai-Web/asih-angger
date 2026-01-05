@@ -2,7 +2,16 @@
   <section id="portfolio" ref="sectionRef" class="py-24 bg-gray-50 fade-in-section" :class="{ 'is-visible': isVisible }">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-12 md:mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-8">Work Portfolio</h2>
+        <h2 class="text-3xl md:text-4xl font-bold">Portofolio</h2>
+        <div class="flex justify-center mb-8">
+          <NuxtLink
+            to="https://drive.google.com/file/d/1a3Rx-Qf0TcHZz4JpVYW0xdL7dUu57Ei2/view?usp=drive_link"
+            target="_blank"
+            class="font-medium navigation-link hover:text-primary px-6 py-2 mt-6 border"
+          >
+            Lihat Semua Portofolio
+          </NuxtLink>
+        </div>
         <div class="w-20 h-2 bg-primary mx-auto" role="presentation" aria-hidden="true"></div>
         <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12 mt-6 md:mt-8 px-4">
           <button
@@ -23,7 +32,7 @@
 
       <div class="portfolio-grid">
         <div
-          v-for="item in filteredItems"
+          v-for="item in paginatedItems"
           :key="item.id"
           :class="['portfolio-item fade-in cursor-pointer', item.class]"
           @click="openLightbox(item)"
@@ -33,10 +42,24 @@
             :alt="`Professional ${item.cat} photography portfolio by Asih Angger - High-quality ${item.cat === 'product' ? 'commercial product' : item.cat === 'beauty' ? 'beauty portrait' : item.cat === 'baby' ? 'baby documentary' : 'event'} photography services`"
             width="800"
             height="600"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 300px"
             class="w-full h-full object-cover"
             loading="lazy"
+            draggable="false"
+            placeholder
+            placeholder-class="blur-placeholder"
           />
         </div>
+      </div>
+
+      <!-- Load More Button -->
+      <div v-if="hasMore" class="flex justify-center mt-8">
+        <button
+          @click="loadMore"
+          class="font-medium navigation-link hover:text-primary px-6 py-2 mt-6 border cursor-pointer"
+        >
+          Muat Lebih Banyak ({{ remainingCount }} lagi)
+        </button>
       </div>
     </div>
   </section>
@@ -74,14 +97,16 @@
 import type { PortfolioItem } from '~/composables/usePortfolio'
 
 const { elementRef: sectionRef, isVisible } = useFadeIn()
-const { activeFilter, filteredItems, setFilter } = usePortfolio()
+const { activeFilter, paginatedItems, hasMore, remainingCount, loadMore, setFilter } = usePortfolio()
 
 const filters = [
-  { value: 'all' as const, label: 'All' },
-  { value: 'product' as const, label: 'Product' },
+  { value: 'all' as const, label: 'Semua' },
+  { value: 'product' as const, label: 'Produk' },
   { value: 'beauty' as const, label: 'Beauty' },
   { value: 'baby' as const, label: 'Baby' },
   { value: 'event' as const, label: 'Event' },
+  { value: 'retouch' as const, label: 'Retouch' },
+  { value: 'private-class' as const, label: 'Privat' },
 ]
 
 const selectedImage = ref<PortfolioItem | null>(null)
@@ -102,6 +127,27 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+.navigation-link {
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navigation-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 42px;
+  bottom: -1px;
+  left: 0;
+  background-color: var(--dark);
+  transition: width 0.3s;
+  z-index: -1;
+}
+
+.navigation-link:hover::after {
+  width: 100%;
+}
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -182,6 +228,13 @@ onUnmounted(() => {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Blur placeholder for lazy loading images */
+.blur-placeholder {
+  filter: blur(20px);
+  transform: scale(1.1);
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .border-primary {

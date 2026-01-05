@@ -5,11 +5,12 @@
         <div class="relative">
           <NuxtImg
             :src="AsihAngger"
-            alt="Asih Angger - Professional photographer and retoucher specializing in product, portrait, beauty, baby, and event photography"
+            alt="Asih Angger - Fotografer & Retoucher Profesional. Spesialis fotografi produk, potret, beauty, baby, dan event"
             width="1000"
             height="1000"
             loading="lazy"
             class="shadow-2xl rounded-lg"
+            draggable="false"
           />
           <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-primary -z-10 rounded-lg"></div>
         </div>
@@ -18,12 +19,16 @@
             Minimalism Meets <span class="text-primary italic">Emotion</span>.
           </h2>
           <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-            Asih Angger is a photographer and retoucher who specializes in product photography, portrait photography, beauty photography, baby photography, event photography, and commercial photography.
+            Fotografer & Videografer kreatif dengan pengalaman lebih dari <b>4 tahun</b> di bidang fotografi komersial, lifestyle, dan produk. Berpengalaman dalam fotografi model, videografi, serta retouching. Telah berkolaborasi dengan berbagai brand dan figur publik seperti Dian Pelangi, Nagita Slavina, dan Marlene Hariman untuk menciptakan konten visual yang berdampak dan berkelas. <br/><br/>
+            
+            Menguasai Adobe Photoshop, Lightroom, dan CapCut, saya memadukan kreativitas dengan keahlian teknis untuk menghasilkan visual yang kuat dan menarik. Karya saya mencakup sektor beauty, lifestyle, health, serta food & beverage, dengan fokus menyampaikan cerita brand secara visual dan emosional. <br/><br/>
+            
+            Dengan latar belakang digital marketing dari RevoU, saya mengombinasikan storytelling visual dengan pendekatan berbasis data untuk memaksimalkan engagement audiens dan nilai brand.
           </p>
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-full overflow-hidden">
               <NuxtImg
-                src="https://images.unsplash.com/photo-1520549233664-03f65c1d1327?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/img/others/others1.webp"
                 alt="Asih Angger - Professional photographer and retoucher"
                 width="48"
                 height="48"
@@ -32,7 +37,7 @@
             </div>
             <div>
               <p class="font-bold uppercase tracking-widest text-sm">Asih Angger</p>
-              <p class="text-xs text-gray-400">Photographer & Retoucher</p>
+              <p class="text-xs text-gray-400">Fotografi</p>
             </div>
           </div>
         </div>

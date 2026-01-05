@@ -2,7 +2,7 @@
   <section ref="sectionRef" class="py-16 border-y border-gray-100 bg-white fade-in-section" :class="{ 'is-visible': isVisible }">
     <div class="max-w-7xl mx-auto px-6">
       <p class="text-center text-xs uppercase tracking-widest text-gray-400 mb-10">
-        Trusted by Professional Brands
+        Dikenal oleh Brand Profesional
       </p>
       <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale">
         <div 
@@ -21,7 +21,7 @@
 <script setup lang="ts">
 const { elementRef: sectionRef, isVisible } = useFadeIn()
 
-const brands = ["L'ORÉAL", 'VOGUE', 'NIKE', 'SAMSUNG', 'ADIDAS']
+const brands = ["BUTTONSCARVES", 'PETITE BAKERY', 'FARADIS ORGANIK', 'KAL`S KITCHEN', 'SALADROWIS']
 </script>
 
 <style scoped>

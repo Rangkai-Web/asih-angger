@@ -11,6 +11,7 @@
     <Testimonials />
     <Contact />
     <SocialProof />
+    <Maps />
     <Footer />
     <WhatsAppFloat />
   </div>

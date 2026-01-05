@@ -3,39 +3,39 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
-          <h2 class="text-4xl font-bold mb-6">The Art of Retouching</h2>
+          <h2 class="text-4xl font-bold mb-6">Seni di Balik Retouching</h2>
           <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-            Beyond the shutter, we perfect every pixel. Our retouching services range from subtle skin enhancements to high-end color grading and background manipulation.
+            Lebih dari sekadar menekan tombol kamera, kami menyempurnakan setiap piksel dengan presisi. Layanan retouching kami mencakup penyempurnaan halus hingga manipulasi visual tingkat lanjut, menghasilkan foto yang bersih, natural, dan bernilai tinggi.
           </p>
           <ul class="space-y-4 mb-8">
             <li class="flex items-center gap-3">
               <Icon name="lucide:check-circle" class="text-primary w-5 h-5" />
-              Advanced Skin Texture Retouching
+              Retouching Tekstur Kulit
             </li>
             <li class="flex items-center gap-3">
               <Icon name="lucide:check-circle" class="text-primary w-5 h-5" />
-              Professional Color Correction
+              Koreksi Warna Profesional
             </li>
             <li class="flex items-center gap-3">
               <Icon name="lucide:check-circle" class="text-primary w-5 h-5" />
-              Background Clean-up & Composite
+              Pembersihan & Komposisi Background
             </li>
           </ul>
         </div>
         <div class="comparison-slider" ref="sliderContainer">
           <NuxtImg
-            src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=1000"
+            src="/img/others/others2.webp"
             class="img-after"
-            alt="Professional photo retouching result showing enhanced skin texture, color correction, and refined details"
+            alt="Hasil retouching foto yang meningkatkan tekstur kulit, koreksi warna, dan detail yang halus"
             width="1000"
             height="500"
             loading="lazy"
           />
           <NuxtImg
             ref="beforeImage"
-            src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=1000&sat=-100&contrast=80"
+            src="/img/others/others3.webp"
             class="img-before"
-            alt="Original photograph before professional retouching and enhancement"
+            alt="Foto asli sebelum retouching dan peningkatan"
             width="1000"
             height="500"
             loading="lazy"

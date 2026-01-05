@@ -2,29 +2,32 @@
   <section id="pricing" ref="sectionRef" class="py-24 bg-gray-50 fade-in-section" :class="{ 'is-visible': isVisible }">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold mb-4 uppercase tracking-tighter">Packages</h2>
-        <p class="text-gray-500">Transparent pricing for premium quality.</p>
+        <h2 class="text-4xl font-bold mb-4 uppercase tracking-tighter">Paket</h2>
+        <p class="text-gray-500">Pilih paket yang sesuai dengan kebutuhan Anda.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div 
           v-for="(plan, index) in plans" 
           :key="index"
-          class="bg-white p-10 border border-gray-100 hover:border-primary transition group pricing-item"
+          class="flex justify-between flex-col bg-white p-10 border border-gray-100 hover:border-primary transition group pricing-item"
           :class="{ 'border-2 border-primary relative transform scale-105 shadow-xl': plan.popular }"
           :style="{ transitionDelay: isVisible ? `${index * 0.15}s` : '0s' }"
         >
-          <div v-if="plan.popular" class="absolute top-0 right-0 bg-primary px-3 py-1 text-[10px] font-bold uppercase tracking-tighter">Most Popular</div>
-          <h3 class="text-xs uppercase tracking-widest font-bold text-gray-400 mb-4">{{ plan.title }}</h3>
-          <div class="text-4xl font-bold mb-6">{{ plan.price }}<span class="text-sm text-gray-400">/session</span></div>
-          <ul v-if="plan.features" class="space-y-4 text-sm text-gray-600 mb-10">
-            <li v-for="(feature, idx) in plan.features" :key="idx" class="flex items-center gap-2">
-              <Icon name="lucide:check" class="w-4 h-4 text-primary" />
-              {{ feature }}
-            </li>
-          </ul>
-          <p v-else class="text-sm text-gray-600 mb-10">{{ plan.description }}</p>
-          <a :href="plan.link" class="block text-center py-3 font-bold text-xs uppercase tracking-widest transition" :class="plan.popular ? 'bg-primary hover:brightness-105' : 'bg-gray-100 group-hover:bg-primary'" :aria-label="plan.ariaLabel">{{ plan.buttonText }}</a>
+          <div class="flex-1">
+            <div v-if="plan.popular" class="absolute top-0 right-0 bg-primary px-3 py-1 text-[10px] font-bold uppercase tracking-tighter">Paling Populer</div>
+            <!-- <h3 class="text-xs uppercase tracking-widest font-bold text-gray-400 mb-4">{{ plan.title }}</h3> -->
+            <div class="text-4xl font-bold mb-6">{{ plan.title }}<span class="text-sm text-gray-400"></span></div>
+            <ul v-if="plan.features" class="space-y-4 text-sm text-gray-600 mb-10">
+              <li v-for="(feature, idx) in plan.features" :key="idx" class="flex items-center gap-2">
+                <div class="w-6 h-6 px-1 py-0.5 bg-primary rounded-full shrink-0 flex items-center justify-center">
+                  <Icon name="lucide:check" class="w-4 h-4 text-dark" />
+                </div>
+                {{ feature }}
+              </li>
+            </ul>
+          </div>
+          <a :href="plan.link" class="block text-center py-3 font-bold text-xs uppercase tracking-widest transition" :class="plan.popular ? 'bg-primary hover:brightness-105' : 'bg-gray-200 group-hover:bg-gray-300'" :aria-label="plan.ariaLabel">{{ plan.buttonText }}</a>
         </div>
       </div>
     </div>
@@ -36,30 +39,27 @@ const { elementRef: sectionRef, isVisible } = useFadeIn()
 
 const plans = [
   {
-    title: 'Portrait / Solo',
-    price: 'Rp500.000',
-    features: ['2 Hours Session', '10 Retouched Photos', 'Online Gallery Access'],
+    title: 'Retouch & Editing',
+    features: ['Basic Editing', 'Advanced Retouching'],
     link: '#contact',
-    buttonText: 'Select Plan',
-    ariaLabel: 'Select Portrait/Solo photography plan',
+    buttonText: 'Pilih Paket',
+    ariaLabel: 'Pilih Paket Retouch & Editing',
     popular: false,
   },
   {
-    title: 'Commercial / Brand',
-    price: 'Rp1.000.000',
-    features: ['Full Day Session', '25 High-End Retouched', 'Full Commercial Rights', 'Express Delivery'],
+    title: 'Fotografi',
+    features: ['Foto Produk', 'Beauty Portrait', 'Dokumentasi Bayi', 'Event Photography'],
     link: '#contact',
-    buttonText: 'Select Plan',
-    ariaLabel: 'Select Commercial/Brand photography plan',
+    buttonText: 'Pilih Paket',
+    ariaLabel: 'Pilih Paket Fotografi',
     popular: true,
   },
   {
-    title: 'Events / Large Scale',
-    price: 'Rp1.500.000',
-    description: 'Ideal for weddings, corporate events, or unique artistic collaborations.',
+    title: 'Kelas Privat',
+    features: ['Kelas Fotografi', 'Kelas Editing Foto'],
     link: '#contact',
-    buttonText: 'Get Quote',
-    ariaLabel: 'Get quote for Events/Large Scale photography',
+    buttonText: 'Pilih Paket',
+    ariaLabel: 'Pilih Paket Kelas Privat',
     popular: false,
   },
 ]
