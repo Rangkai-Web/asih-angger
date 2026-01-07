@@ -15,12 +15,12 @@
         class="testimonials-carousel"
       >
         <Slide v-for="(testimonial, index) in testimonials" :key="index">
-          <div class="flex justify-center items-center p-8 border-t-8 border-b-8 border-primary bg-gray-50 italic text-gray-600 relative h-full mx-2">
+          <div class="h-72 flex justify-center items-center p-4 md:p-8 border-t-8 border-b-8 border-primary bg-gray-50 italic text-gray-600 relative mx-2">
             <!-- <Icon name="lucide:quote" class="w-8! h-8! text-primary absolute -top-6" /> -->
             <NuxtImg
               :src="testimonial.img"
               :alt="testimonial.name"
-              class="w-fit h-fit rounded-md"
+              class="w-full max-w-md h-auto object-contain rounded-md"
               draggable="false"
             />
             <!-- <p class="mb-6 leading-relaxed">"{{ testimonial.quote }}"</p>
