@@ -20,7 +20,7 @@
             <NuxtImg
               :src="testimonial.img"
               :alt="testimonial.name"
-              class="w-fit h-fit rounded-md object-cover"
+              class="w-fit h-fit rounded-md"
               draggable="false"
             />
             <!-- <p class="mb-6 leading-relaxed">"{{ testimonial.quote }}"</p>
