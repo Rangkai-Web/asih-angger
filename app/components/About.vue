@@ -14,16 +14,12 @@
           />
           <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-primary -z-10 rounded-lg"></div>
         </div>
-        <div>
-          <h2 class="text-4xl font-bold mb-6">
+        <div class="flex flex-col gap-6">
+          <h2 class="text-4xl font-bold">
             Minimalism Meets <span class="text-primary italic">Emotion</span>.
           </h2>
-          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-            Fotografer & Videografer kreatif dengan pengalaman lebih dari <b>4 tahun</b> di bidang fotografi komersial, lifestyle, dan produk. Berpengalaman dalam fotografi model, videografi, serta retouching. Telah berkolaborasi dengan berbagai brand dan figur publik seperti Dian Pelangi, Nagita Slavina, dan Marlene Hariman untuk menciptakan konten visual yang berdampak dan berkelas. <br/><br/>
-            
-            Menguasai Adobe Photoshop, Lightroom, dan CapCut, saya memadukan kreativitas dengan keahlian teknis untuk menghasilkan visual yang kuat dan menarik. Karya saya mencakup sektor beauty, lifestyle, health, serta food & beverage, dengan fokus menyampaikan cerita brand secara visual dan emosional. <br/><br/>
-            
-            Dengan latar belakang digital marketing dari RevoU, saya mengombinasikan storytelling visual dengan pendekatan berbasis data untuk memaksimalkan engagement audiens dan nilai brand.
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Fotografer & videografer profesional dengan pengalaman lebih dari 4 tahun di bidang komersial dan lifestyle. Dipercaya oleh brand dan figur publik ternama untuk menciptakan visual yang kuat, emosional, dan bernilai strategis bagi brand.
           </p>
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-full overflow-hidden">

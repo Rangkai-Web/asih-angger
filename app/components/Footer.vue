@@ -10,7 +10,7 @@
             <div class="text-sm font-medium uppercase tracking-widest">Fotografi</div>
           </div>
           <p class="text-gray-400 mb-8 max-w-sm leading-relaxed mt-6">
-            Fotografer & Videografer kreatif dengan pengalaman lebih dari <b>4 tahun</b> di bidang fotografi komersial, lifestyle, dan produk. Berpengalaman dalam fotografi model, videografi, serta retouching. Telah berkolaborasi dengan berbagai brand dan figur publik seperti Dian Pelangi, Nagita Slavina, dan Marlene Hariman untuk menciptakan konten visual yang berdampak dan berkelas.
+            Fotografer & videografer profesional dengan pengalaman lebih dari 4 tahun di bidang komersial dan lifestyle. Dipercaya oleh brand dan figur publik ternama untuk menciptakan visual yang kuat, emosional, dan bernilai strategis bagi brand.
           </p>
         </div>
         

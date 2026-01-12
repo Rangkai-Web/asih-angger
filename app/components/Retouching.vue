@@ -27,8 +27,6 @@
             src="/img/others/others2.webp"
             class="img-after"
             alt="Hasil retouching foto yang meningkatkan tekstur kulit, koreksi warna, dan detail yang halus"
-            width="1000"
-            height="500"
             loading="lazy"
           />
           <NuxtImg
@@ -36,8 +34,6 @@
             src="/img/others/others3.webp"
             class="img-before"
             alt="Foto asli sebelum retouching dan peningkatan"
-            width="1000"
-            height="500"
             loading="lazy"
           />
           <div class="slider-handle" ref="sliderHandle"></div>
