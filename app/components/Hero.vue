@@ -31,12 +31,12 @@
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 text-white text-center">
-      <h1 class="text-4xl md:text-7xl font-bold mb-6 max-w-4xl mx-auto leading-tight">
-        Mengambil <span class="text-primary">Momen Berharga.</span>
+      <h1 class="text-3xl md:text-7xl font-bold mb-6 max-w-4xl mx-auto leading-tight">
+        Fotografi Profesional Komersial, Produk, dan <span class="text-primary">Momen Berharga Anda.</span>
       </h1>
-      <p class="text-md md:text-2xl font-light mb-10 max-w-2xl mx-auto">
-        Fotografi profesional untuk produk, event, dan momen berharga Anda.
-      </p>
+      <!-- <p class="text-md md:text-2xl font-light mb-10 max-w-2xl mx-auto">
+         produk, event, dan momen berharga Anda.
+      </p> -->
       <div class="flex flex-col md:flex-row justify-center gap-4">
         <a href="#portfolio" class="px-10 py-4 border-2 border-white font-bold uppercase tracking-widest hover:bg-white hover:text-black transition" aria-label="View photography portfolio">Portofolio</a>
         <a href="#contact" class="px-10 py-4 bg-primary text-black font-bold uppercase tracking-widest hover:brightness-105 transition" aria-label="Book a photography session">Hubungi Kami</a>
