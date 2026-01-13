@@ -60,7 +60,7 @@
 
       <div class="pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="text-base tracking-widest text-gray-600 text-center md:text-left">
-          © {{ new Date().getFullYear() }} Asih Angger, dibuat dengan cinta <Icon name="lucide:heart" class="w-4 h-4 text-primary" />
+          © {{ new Date().getFullYear() }} Asih Angger. All rights reserved.
         </div>
         <div class="flex gap-4">
           <a href="https://www.instagram.com/asihangger/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-primary transition duration-500" aria-label="Follow Asih Angger on Instagram">
